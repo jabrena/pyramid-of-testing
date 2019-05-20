@@ -1,6 +1,6 @@
 package org.fundamentals.testing.service;
 
-import lombok.AllArgsConstructor;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,7 @@ public class DemoServiceTest {
     @Autowired
     private DemoService demoService;
 
+    @Tag("unit")
     @Test
     public void demoTest(){
 

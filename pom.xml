@@ -96,9 +96,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<!--
 				<executions>
 					<execution>
-						<id>arquillian</id>
+						<id>unit</id>
 						<goals>
 							<goal>test</goal>
 						</goals>
@@ -106,23 +107,20 @@
 							<excludedGroups>integration</excludedGroups>
 						</configuration>
 					</execution>
+
+					<execution>
+						<id>integration</id>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<groups>integration</groups>
+						</configuration>
+					</execution>
 				</executions>
-				<!--
-				<configuration>
-					<excludedGroups>${test-classes}</excludedGroups>
-				</configuration>
 				-->
 
 			</plugin>
-			<!--
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<configuration>
-					<groups>integration</groups>
-				</configuration>
-			</plugin>
-			-->
 
 		</plugins>
 	</build>
