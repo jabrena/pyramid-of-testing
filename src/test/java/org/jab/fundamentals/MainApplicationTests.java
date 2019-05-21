@@ -1,4 +1,4 @@
-package org.fundamentals.testing;
+package org.jab.fundamentals;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class DemoApplicationTests {
+public class MainApplicationTests {
 
 	@Tag("unit")
 	@Test

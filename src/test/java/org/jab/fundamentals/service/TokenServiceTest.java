@@ -1,4 +1,4 @@
-package org.fundamentals.testing.service;
+package org.jab.fundamentals.service;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,20 +8,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.jab.fundamentals.service.TokenService.TOKEN_LENGTH;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class DemoServiceTest {
+public class TokenServiceTest {
 
     @Autowired
-    private DemoService demoService;
+    private TokenService tokenService;
 
     @Tag("unit")
     @Test
     public void demoTest(){
 
-        assertThat(demoService.getToken().getCharacters())
-                .isNotBlank();
+        assertThat(tokenService.getToken().length()).isEqualTo(TOKEN_LENGTH);
     }
 
 }
